@@ -8,7 +8,7 @@ export default function photographerFactory({
     tagline,
     likeCount
   }) {
-    const picture = `../assets/photographers/${portrait.split('.')[0]} _light.jpg`
+    const picture = `../assets/photographers/account.png`
     var a
     console.log(a)
     function getUserCardDOM() {
@@ -18,7 +18,7 @@ export default function photographerFactory({
       const html = `
       <a href="photographer.html?id=${id}">
         <figure>
-          <img src="${picture}" alt="" aria-label="${name}">
+          <img src="${picture}" alt="profile" aria-label="${name}">
           <figcaption>
             <h2>${name}</h2>
           </figcaption>

@@ -3,7 +3,6 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
   </head>
@@ -22,24 +21,34 @@
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form>
+				<form
+          id="form"
+          name="reserve"
+          action="index.html"
+          method="get"
+          onsubmit="validate();"
+        >
 					<div>
 						<label>Prénom</label>
-						<input type="text" />
+						<input type="text" id="first" name="first" />
 					</div>
+          <div id="error-first-name"></div>
           <div>
 						<label>Nom</label>
-						<input type="text" />
+						<input type="text" id="last" name="last" />
 					</div>
+          <div id="error-last-name"></div>
           <div>
 						<label>Email</label>
-						<input type="email" />
+						<input type="email" id="email" name="email" />
 					</div>
+          <div id="error-mail"></div>
           <div>
 						<label>Votre message</label>
-						<input type="text" style="min-height: 150px;" />
+						<input type="text" style="min-height: 150px;" id="message" name="message" />
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <div id="error-message"></div>
+          <button class="contact_button" type="submit">Envoyer</button>
 				</form>
 			</div>
 		</div>

@@ -103,12 +103,10 @@ async function getPhotographer(id) {
     const mediasCardDOM = document.querySelectorAll('.media_card')
     mediasCardDOM.forEach((el, i) => {
       el.addEventListener('click', (e) => {
-        // open lightbox
         if (e.target.closest('figure') && !lbOpen && !e.target.closest('figcaption')) {
           lbIndex = i
           openLightbox(media[lbIndex])
         }
-        // handle like
         if (e.target.closest('#like > i')) {
           const likeBtn = e.target.closest('#like > i')
           const likeLocal = e.target.closest('#like').childNodes[1]

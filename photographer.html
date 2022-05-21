@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/15924c2e2e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
   </head>
@@ -14,44 +15,97 @@
       <div class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </div>
+      <div class="filters">
+        <label for="sort-select">Trier par </label>
+        <div
+          value="popularity"
+          id="sort-select"
+          class="primary-select"
+          role="list"
+          aria-haspopup="listbox"
+          aria-expanded="true"
+          tabindex="-1"
+        >
+          <button
+            value="popularity"
+            role="button"
+            aria-labelledby="sort-select"
+            tabindex="3"
+          >
+            Popularité
+          </button>
+          <button value="date" role="listitem" aria-labelledby="sort-select" tabindex="3">
+            Date
+          </button>
+          <button
+            value="title"
+            role="listitem"
+            aria-labelledby="sort-select"
+            tabindex="3"
+          >
+            Titre
+          </button>
+          <i class="indicator fas fa-angle-up"></i>
+        </div>
+      </div>
+      <div id="media-container"></div>
     </main>
     <div id="contact_modal">
-			<div class="modal">
-				<header>
+      <div class="modal">
+        <header>
           <h2>Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form
+        <form
           id="form"
           name="reserve"
           action="index.html"
           method="get"
           onsubmit="validate();"
         >
-					<div>
-						<label>Prénom</label>
-						<input type="text" id="first" name="first" />
-					</div>
-          <div id="error-first-name"></div>
-          <div>
-						<label>Nom</label>
-						<input type="text" id="last" name="last" />
-					</div>
-          <div id="error-last-name"></div>
-          <div>
-						<label>Email</label>
-						<input type="email" id="email" name="email" />
-					</div>
-          <div id="error-mail"></div>
-          <div>
-						<label>Votre message</label>
-						<input type="text" style="min-height: 150px;" id="message" name="message" />
-					</div>
-          <div id="error-message"></div>
-          <button class="contact_button" type="submit">Envoyer</button>
-				</form>
-			</div>
-		</div>
-    <script src="/scripts/utils/contactForm.js"></script>
+        <div>
+          <label>Prénom</label>
+          <input type="text" id="first" name="first" />
+        </div>
+        <div id="error-first-name"></div>
+        <div>
+          <label>Nom</label>
+          <input type="text" id="last" name="last" />
+        </div>
+        <div id="error-last-name"></div>
+        <div>
+          <label>Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div id="error-mail"></div>
+        <div>
+          <label>Votre message</label>
+          <input type="text" style="min-height: 150px;" id="message" name="message" />
+        </div>
+        <div id="error-message"></div>
+        <button class="contact_button" type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+    <div class="lightbox" aria-label="image closeup view">
+      <button id="ctrl-prev" class="lb-ctrl prev">
+        <i class="fas fa-angle-left" aria-label="Previous image"></i>
+      </button>
+      <button id="ctrl-next" class="lb-ctrl next" aria-label="Next image">
+        <i class="fas fa-angle-right"></i>
+      </button>
+      <button id="ctrl-close" class="lb-ctrl close">
+        <i class="fas xmark" aria-label="image closeup view"></i>
+      </button>
+      <figure>
+        <div class="media" id="lightbox-media"></div>
+        <figcaption>
+          <p id="lightbox-title"></p>
+        </figcaption>
+      </figure>
+    </div>
+    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/utils/select.js"></script>
+    <script type="module" src="scripts/pages/photographer.js"></script>
   </body>
 </html>

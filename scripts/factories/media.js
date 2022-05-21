@@ -1,7 +1,5 @@
 export default function mediaFactory(
-    // eslint-disable-next-line no-unused-vars
     { date, image, video, likes, photographerId, title, price },
-    // eslint-disable-next-line no-unused-vars
     { name, portrait, city, country, id, tagline }
   ) {
     const path = (el) => `../assets/images/${name.split(' ')[0].split('-').join(' ')}/${el}`
@@ -17,9 +15,9 @@ export default function mediaFactory(
       return videoEL
     }
   
-    function imageDOM(light = false) {
+    function imageDOM() {
       const img = document.createElement('img')
-      img.src = `${path(image.split('.')[0])}${light ? ' _light' : ''}.jpg`
+      img.src = `${path(image.split('.')[0])}.jpg`
       img.alt = title
       return img
     }

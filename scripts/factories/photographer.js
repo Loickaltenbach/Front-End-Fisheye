@@ -8,7 +8,7 @@ export default function photographerFactory({
     tagline,
     likeCount
   }) {
-    const picture = `../assets/photographers/account.png`
+    const picture = `../assets/photographers/${portrait.split('.')[0]}.jpg`
     var a
     console.log(a)
     function getUserCardDOM() {
@@ -47,7 +47,7 @@ export default function photographerFactory({
           .toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</p>
         <i class="fas fa-heart"></i>
-        <p class="price">${price}€/jours</p>
+        <p class="price">${price}€/jour</p>
       </span>
       `
       div.innerHTML = html

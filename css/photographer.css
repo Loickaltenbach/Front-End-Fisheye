@@ -91,7 +91,6 @@ select::-ms-expand {
 .primary-select {
     background-color: #901c1c;
     position: relative;
-    top: -15px;
     color: white;
     border-radius: 5px;
     width: 140px;
@@ -112,6 +111,7 @@ select::-ms-expand {
   
 .primary-select button {
     background-color: #901c1c;
+    border: none;
     cursor: pointer;
     width: calc(100% - 0px);
     height: 0;
@@ -415,6 +415,7 @@ select::-ms-expand {
 header .logo {
     height: 50px;
     margin-left: 100px;
+    margin-top: 35px;
 }
 
 .photograph-header {

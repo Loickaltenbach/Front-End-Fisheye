@@ -25,14 +25,14 @@ textarea:focus {
 }
 
 select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font: inherit;
 }
 
 select:focus {
@@ -63,28 +63,28 @@ select::-ms-expand {
     border: 6px solid #901c1c;
     border-color: #901c1c transparent #d3573c transparent;
     -webkit-animation: spinner 1.5s ease-in-out 0s infinite both;
-            animation: spinner 1.5s ease-in-out 0s infinite both;
+    animation: spinner 1.5s ease-in-out 0s infinite both;
 }
   
 @-webkit-keyframes spinner {
     from {
-      -webkit-transform: rotate(-360deg);
-              transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
     to {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
   
 @keyframes spinner {
     from {
-      -webkit-transform: rotate(-360deg);
-              transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
     to {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
   
@@ -125,11 +125,11 @@ select::-ms-expand {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     padding: 5px 15px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -163,7 +163,7 @@ select::-ms-expand {
 .primary-select:hover .indicator,
 .primary-select button:focus ~ .indicator {
     -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
   
 .primary-select:focus button,
@@ -207,9 +207,9 @@ select::-ms-expand {
 .media_card img {
     cursor: pointer;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: 0 30%;
-       object-position: 0 30%;
+    object-position: 0 30%;
     width: 100%;
     height: 300px;
     border-radius: 5px;
@@ -221,14 +221,14 @@ select::-ms-expand {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 50px;
     width: 100%;
     color: #901c1c;
@@ -240,8 +240,8 @@ select::-ms-expand {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 }
   
 .media_card figcaption span i {
@@ -258,14 +258,14 @@ select::-ms-expand {
     left: 0;
     font-weight: 800;
     -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
   
 .media_card figcaption span i.liked::after, .media_card figcaption span i:hover::after {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
 }
   
 .media_card figcaption p,
@@ -284,7 +284,7 @@ select::-ms-expand {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(calc(15px - 50%), calc(-50% - 15px)) scale(1.5, 0.8);
-            transform: translate(calc(15px - 50%), calc(-50% - 15px)) scale(1.5, 0.8);
+    transform: translate(calc(15px - 50%), calc(-50% - 15px)) scale(1.5, 0.8);
     width: 0px;
     height: 0px;
     border-style: solid;
@@ -299,11 +299,11 @@ select::-ms-expand {
 .lightbox {
     display: none;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -333,11 +333,11 @@ select::-ms-expand {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .lightbox figure .media {
@@ -351,7 +351,7 @@ select::-ms-expand {
     max-width: 100%;
     max-height: 100%;
     -o-object-fit: contain;
-        object-fit: contain;
+    object-fit: contain;
     border-radius: 5px;
 }
 
@@ -410,6 +410,13 @@ select::-ms-expand {
 
 #contact_modal {
     display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
 header .logo {
@@ -459,7 +466,7 @@ header .logo {
     height: 250px;
     border-radius: 50%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin: auto auto;
   }
   
@@ -470,8 +477,8 @@ header .logo {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     position: fixed;
     bottom: -5px;
     right: 1em;
@@ -488,11 +495,11 @@ header .logo {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
 .contact_button {
@@ -520,8 +527,8 @@ header .logo {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin: 20px 0;
     font-size: 18px;
     font-weight: 700;
@@ -574,13 +581,12 @@ form div {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 form input {
     width: 100%;
-    height: 68px;
+    height: 40px;
     border: none;
     border-radius: 5px;
 }
@@ -591,11 +597,11 @@ form input {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }

@@ -1,6 +1,6 @@
 export default function mediaFactory(
-    { date, image, video, likes, photographerId, title, price },
-    { name, portrait, city, country, id, tagline }
+    { image, video, likes, title },
+    { name }
   ) {
     const path = (el) => `../assets/images/${name.split(' ')[0].split('-').join(' ')}/${el}`
   

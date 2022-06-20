@@ -13,7 +13,7 @@ async function getPhotographer(id) {
 }
 
 // main
-;(async () => {
+(async () => {
   // recupere l'id du photographe dans l'url
   const url = new URL(window.location.href)
   const photographersId = parseInt(url.searchParams.get('id'))

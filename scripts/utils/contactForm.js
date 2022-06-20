@@ -1,9 +1,9 @@
-function displayModal() {
+export function displayModal() {
     const modal = document.getElementById("contact_modal");
 	modal.style.display = "block";
 }
 
-function closeModal() {
+export function closeModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "none";
 }
@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 })
 
-function validate () {
+export function validate () {
     let firstChecked;
     let lastChecked;
     let mailChecked;
@@ -43,7 +43,7 @@ function validate () {
         errorFirstName.style.display = 'none';
         firstName.style.border = 'none';
         firstChecked = true;
-    };
+    }
     
     if (!lastName.value.match(nameFormat) || lastName.value == ' ' || lastName.value == null || lastName.value.length < 2) { 
         errorLastName.innerText = 'Entrez 2 caractères ou plus pour ce champ.';
@@ -54,7 +54,7 @@ function validate () {
         errorLastName.style.display = 'none';
         lastName.style.border = 'none';
         lastChecked = true;
-      };
+      }
     
     if (!mailFormat.test(mail.value)) { 
         errorMail.innerText = 'Renseignez une addresse mail valide';
@@ -65,7 +65,7 @@ function validate () {
         errorMail.style.display = 'none';
         mail.style.border = 'none';
         mailChecked = true;
-    };
+    }
     
     if (!message.value.match(nameFormat)) { 
         errorMessage.innerText = 'Renseignez un message';

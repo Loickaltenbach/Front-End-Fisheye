@@ -8,6 +8,12 @@ function closeModal() {
     modal.style.display = "none";
 }
 
+document.addEventListener("keydown", (e) => {
+    if(e.key === 'Escape') {
+        closeModal()
+    }
+})
+
 // form inputs + REGEX for formatting data
 const form = document.getElementById ('form');
 const firstName = document.getElementById ('first');
@@ -80,5 +86,6 @@ function validate () {
 
     if (firstChecked == true && lastChecked == true && mailChecked == true && messageChecked == true) {
         form.style.display = "none";
+        console.log("FirstName", firstName.value, "LastName", lastName.value, "Email", mail.value, "Message", message.value)
     }
 }

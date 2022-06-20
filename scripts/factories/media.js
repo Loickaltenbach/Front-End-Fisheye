@@ -22,17 +22,17 @@ export default function mediaFactory(
       return img
     }
   
-    function getMediaDOM() {
+    function getMediaDOM(index) {
       const figure = document.createElement('figure')
       figure.classList.add('media_card')
       figure.classList.toggle('video', !!video)
-      figure.tabIndex = 10
+      figure.tabIndex = index
       figure.innerHTML = `
         <figcaption>
           <h2>${title}</h2>
           <span id="like">
             <p>${likes}</p>
-            <i class="fas fa-heart" aria-label="likes"></i>
+            <i class="fas fa-heart" aria-label="likes" tabIndex="${index + 1}"></i>
           </span>
         </figcaption>
       `

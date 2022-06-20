@@ -50,9 +50,11 @@ async function getPhotographer(id) {
     const container = document.querySelector('#media-container')
     container.innerHTML = ''
     for (const media of medias) {
+      let index = 0;
       const mediaModel = mediaFactory(media, photographer)
-      const mediaDOM = mediaModel.getMediaDOM()
+      const mediaDOM = mediaModel.getMediaDOM(index)
       container.appendChild(mediaDOM)
+      index = index + 2
     }
   }
 
@@ -104,6 +106,30 @@ async function getPhotographer(id) {
     mediasCardDOM.forEach((el, i) => {
       el.addEventListener('click', (e) => {
         if (e.target.closest('figure') && !lbOpen && !e.target.closest('figcaption')) {
+          lbIndex = i
+          openLightbox(media[lbIndex])
+        }
+        if (e.target.closest('#like > i')) {
+          const likeBtn = e.target.closest('#like > i')
+          const likeLocal = e.target.closest('#like').childNodes[1]
+          const likeGlobal = document.querySelector('.photograph-like > .like-count')
+
+          const likeInc = (el, decr = false) =>
+            (el.innerHTML = parseInt(el.innerHTML) + (decr ? -1 : 1))
+
+          if (likeBtn.classList.contains('liked')) {
+            likeBtn.classList.toggle('liked', false)
+            likeInc(likeLocal, true)
+            likeInc(likeGlobal, true)
+          } else {
+            likeBtn.classList.toggle('liked', true)
+            likeInc(likeLocal)
+            likeInc(likeGlobal)
+          }
+        }
+      }),
+      el.addEventListener('keydown', (e) => {
+        if (e.target.closest('figure') && !lbOpen && !e.target.closest('figcaption') && e.key === "Enter") {
           lbIndex = i
           openLightbox(media[lbIndex])
         }

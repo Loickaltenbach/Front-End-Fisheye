@@ -47,15 +47,14 @@ async function getPhotographer(id) {
   }
 
   async function displayMedia(medias) {
-    const container = document.querySelector('#media-container')
-    container.innerHTML = ''
-    for (const media of medias) {
-      let index = 0;
-      const mediaModel = mediaFactory(media, photographer)
-      const mediaDOM = mediaModel.getMediaDOM(index)
-      container.appendChild(mediaDOM)
-      index = index + 2
-    }
+    const container = document.querySelector("#media-container");
+    container.innerHTML = "";
+    medias.forEach(function (media, key) {
+      const index = key + 10;
+      const mediaModel = mediaFactory(media, photographer);
+      const mediaDOM = mediaModel.getMediaDOM(index);
+      container.appendChild(mediaDOM);
+    });
   }
 
   function openLightbox(m) {
@@ -133,7 +132,7 @@ async function getPhotographer(id) {
           lbIndex = i
           openLightbox(media[lbIndex])
         }
-        if (e.target.closest('#like > i')) {
+        if (e.target.closest("#like > i") && e.key === "Enter") {
           const likeBtn = e.target.closest('#like > i')
           const likeLocal = e.target.closest('#like').childNodes[1]
           const likeGlobal = document.querySelector('.photograph-like > .like-count')

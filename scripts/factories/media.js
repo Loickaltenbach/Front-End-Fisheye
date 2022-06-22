@@ -11,6 +11,7 @@ export default function mediaFactory(
         <source src="${path(video)}" type='video/mp4'>
         <p>Votre navigateur ne supporte pas les vidéos HTML5.</p>`
       videoEL.tabIndex = -1
+      videoEL.title = title
       videoEL.setAttribute('aria-label', title)
       return videoEL
     }

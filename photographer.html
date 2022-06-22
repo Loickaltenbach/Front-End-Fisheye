@@ -48,14 +48,14 @@
           >
             Titre
           </button>
-          <i class="indicator fas fa-angle-up"></i>
+          <em class="indicator fas fa-angle-up"></em>
         </div>
       </div>
       <div id="media-container"></div>
     </main>
     <div id="contact_modal">
       <div class="modal">
-        <img src="assets/icons/close.svg" onclick="closeModal()" />
+        <img src="assets/icons/close.svg" alt="close button" onclick="closeModal()" />
         <header>
           <h2>Contactez-moi</h2>
         </header>
@@ -67,23 +67,23 @@
           onsubmit="validate();"
         >
         <div>
-          <label>Prénom</label>
-          <input type="text" id="first" name="first" />
+          <label for="first">Prénom</label>
+          <input aria-label="first name" type="text" id="first" name="first" />
         </div>
         <div id="error-first-name"></div>
         <div>
-          <label>Nom</label>
-          <input type="text" id="last" name="last" />
+          <label for="last">Nom</label>
+          <input aria-label="last name" type="text" id="last" name="last" />
         </div>
         <div id="error-last-name"></div>
         <div>
-          <label>Email</label>
-          <input type="email" id="email" name="email" />
+          <label for="email">Email</label>
+          <input aria-label="email" type="email" id="email" name="email" />
         </div>
         <div id="error-mail"></div>
         <div>
-          <label>Votre message</label>
-          <input type="text" style="min-height: 150px;" id="message" name="message" />
+          <label for="message">Votre message</label>
+          <input aria-label="message" type="text" style="min-height: 150px;" id="message" name="message" />
         </div>
         <div id="error-message"></div>
         <button class="contact_button" type="submit">Envoyer</button>
@@ -92,13 +92,13 @@
   </div>
     <div class="lightbox" aria-label="image closeup view">
       <button id="ctrl-prev" class="lb-ctrl prev">
-        <i class="fas fa-angle-left" aria-label="Previous image"></i>
+        <em class="fas fa-angle-left" aria-label="Previous image"></em>
       </button>
       <button id="ctrl-next" class="lb-ctrl next" aria-label="Next image">
-        <i class="fas fa-angle-right"></i>
+        <em class="fas fa-angle-right"></em>
       </button>
       <button id="ctrl-close" class="lb-ctrl close">
-        <i class="fas xmark" aria-label="image closeup view"></i>
+        <em class="fas xmark" aria-label="image closeup view"></em>
       </button>
       <figure>
         <div class="media" id="lightbox-media"></div>
